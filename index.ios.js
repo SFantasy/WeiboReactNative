@@ -11,6 +11,8 @@ var React = require('react-native');
 var url = require('url');
 
 var config = require('./app/config');
+var api = require('./app/api');
+var common = require('./app/common');
 var HomeView = require('./app/Home');
 
 var {
@@ -58,7 +60,6 @@ var Yijian = React.createClass({
     var urlObj = url.parse(navState.url, true);
 
     if (urlObj.pathname === url.parse(config.redirect_uri).pathname && navState.loading) {
-      console.log('Current Path:', urlObj.pathname);
       // 获取code
       var code = urlObj.query.code;
       var auth_url = [config.auth_uri,
@@ -78,18 +79,17 @@ var Yijian = React.createClass({
             login: true
           });
           // 存储access_token
-          this._storeAccessToken(responseData.access_token);
+          common.storeItem(config.token_store_key, responseData.access_token);
+          // 获取登录用户的uid
+          fetch(api.account.getUid + '?access_token=' + responseData.access_token)
+            .then((res) => res.json())
+            .then((data) => {
+              common.storeItem(config.uid_store_key, data.uid + '');
+            })
+            .done();
         })
         .catch((err) => console.log(err))
         .done();
-    }
-  },
-
-  async _storeAccessToken (access_token) {
-    try {
-      await AsyncStorage.setItem(config.token_store_key, access_token);
-    } catch (err) {
-      console.error(err);
     }
   }
 });
