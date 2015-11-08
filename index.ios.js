@@ -15,10 +15,9 @@ var HomeView = require('./app/Home');
 
 var {
   AppRegistry,
-  StyleSheet,
-  Text,
   View,
-  WebView
+  WebView,
+  AsyncStorage
 } = React;
 
 var OAUTH_URL = [
@@ -29,13 +28,14 @@ var OAUTH_URL = [
 ].join('');
 
 var Yijian = React.createClass({
-  getInitialState: function () {
+
+  getInitialState () {
     return {
       login: false
     }
   },
 
-  render: function() {
+  render () {
     if (this.state.login) {
       return (
         <HomeView />
@@ -48,15 +48,17 @@ var Yijian = React.createClass({
           ref={'webview'}
           url={OAUTH_URL}
           automaticallyAdjustContentInsets={false}
-          onNavigationStateChange={this.onNavigationStateChange.bind(this)}
+          onNavigationStateChange={this.onNavigationStateChange}
           startInLoadingState={true}
           scalesPageToFit={true} />
       </View>);
   },
 
-  onNavigationStateChange: function (navState) {
+  onNavigationStateChange (navState) {
     var urlObj = url.parse(navState.url, true);
-    if (urlObj.pathname == url.parse(config.redirect_uri).pathname) {
+
+    if (urlObj.pathname === url.parse(config.redirect_uri).pathname && navState.loading) {
+      console.log('Current Path:', urlObj.pathname);
       // 获取code
       var code = urlObj.query.code;
       var auth_url = [config.auth_uri,
@@ -67,17 +69,27 @@ var Yijian = React.createClass({
         '&code=' + code
       ].join('');
 
+      // 获取access_token
       fetch(auth_url, {
         method: 'post'
       }).then((response) => response.json())
         .then((responseData) => {
           this.setState({
-            login: true,
-            token: responseData.access_token
+            login: true
           });
+          // 存储access_token
+          this._storeAccessToken(responseData.access_token);
         })
         .catch((err) => console.log(err))
         .done();
+    }
+  },
+
+  async _storeAccessToken (access_token) {
+    try {
+      await AsyncStorage.setItem(config.token_store_key, access_token);
+    } catch (err) {
+      console.error(err);
     }
   }
 });
