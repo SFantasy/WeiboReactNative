@@ -1,10 +1,18 @@
+'use strict';
+
+// Module dependencies
 var React = require('react-native');
+var Spinner = require('react-native-spinkit');
 var api = require('../api');
 var config = require('../config');
 var common = require('../common');
+var styles = require('./style');
 
 var {
+  View,
   Text,
+  Image,
+  ScrollView,
   AsyncStorage
 } = React;
 
@@ -44,12 +52,18 @@ module.exports = React.createClass({
   render () {
     if (!this.state.loaded) {
       return (
-        <Text>Data Not loaded</Text>
+        <View style={styles.centerContainer}>
+          <Spinner size={36} type="Bounce" color="#5ac8fb" />
+        </View>
       );
     }
 
     return (
-      <Text>User</Text>
+      <ScrollView style={styles.container}>
+        <View style={styles.header}>
+          <Image style={styles.avatar} source={{uri:this.state.data.avatar_large}} />
+        </View>
+      </ScrollView>
     );
   }
 });
