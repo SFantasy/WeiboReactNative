@@ -24,6 +24,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9A1EA6F21BEDCFA5008B6D2C /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A1EA6F11BEDCFA5008B6D2C /* FontAwesome.ttf */; };
 		9A1EA6F91BEDD124008B6D2C /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1EA6F81BEDD119008B6D2C /* libRNVectorIcons.a */; };
+		9ACDAA341BF82817001E87DB /* libRNSpinkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACDAA321BF827FA001E87DB /* libRNSpinkit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,13 @@
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
+		9ACDAA311BF827FA001E87DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ACDAA231BF827FA001E87DB /* RNSpinkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D42CB3511B2538DE00FD0AE2;
+			remoteInfo = RNSpinkit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +145,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		9A1EA6F11BEDCFA5008B6D2C /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		9A1EA6F31BEDD118008B6D2C /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		9ACDAA231BF827FA001E87DB /* RNSpinkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSpinkit.xcodeproj; path = "../node_modules/react-native-spinkit/ios/RNSpinkit.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ACDAA341BF82817001E87DB /* libRNSpinkit.a in Frameworks */,
 				9A1EA6F91BEDD124008B6D2C /* libRNVectorIcons.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -274,6 +284,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				9ACDAA231BF827FA001E87DB /* RNSpinkit.xcodeproj */,
 				9A1EA6F31BEDD118008B6D2C /* RNVectorIcons.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -323,6 +334,14 @@
 			isa = PBXGroup;
 			children = (
 				9A1EA6F81BEDD119008B6D2C /* libRNVectorIcons.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9ACDAA241BF827FA001E87DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9ACDAA321BF827FA001E87DB /* libRNSpinkit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -434,6 +453,10 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = 9ACDAA241BF827FA001E87DB /* Products */;
+					ProjectRef = 9ACDAA231BF827FA001E87DB /* RNSpinkit.xcodeproj */;
+				},
+				{
 					ProductGroup = 9A1EA6F41BEDD118008B6D2C /* Products */;
 					ProjectRef = 9A1EA6F31BEDD118008B6D2C /* RNVectorIcons.xcodeproj */;
 				},
@@ -522,6 +545,13 @@
 			fileType = archive.ar;
 			path = libRNVectorIcons.a;
 			remoteRef = 9A1EA6F71BEDD119008B6D2C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9ACDAA321BF827FA001E87DB /* libRNSpinkit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSpinkit.a;
+			remoteRef = 9ACDAA311BF827FA001E87DB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

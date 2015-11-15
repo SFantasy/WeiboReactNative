@@ -1,6 +1,8 @@
 Yijian
 ---
 
+Another Weibo client made with ReactNative.
+
 ## Development
 
 - Node.js v4.0+
@@ -15,6 +17,7 @@ Yijian
 ## Libraries used
 
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+- [react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
 
 ## License
 
