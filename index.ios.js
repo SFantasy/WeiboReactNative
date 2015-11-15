@@ -1,7 +1,7 @@
 /**
  * 一简微博
  *
- * @author Fantasy0 <fantasyshao@icloud.com>
+ * @author FantasyShao <fantasyshao@icloud.com>
  */
 
 'use strict';
@@ -18,8 +18,7 @@ var HomeView = require('./app/Home');
 var {
   AppRegistry,
   View,
-  WebView,
-  AsyncStorage
+  WebView
 } = React;
 
 var OAUTH_URL = [
@@ -45,7 +44,7 @@ var Yijian = React.createClass({
     }
 
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, marginTop: 20 }}>
         <WebView
           ref={'webview'}
           url={OAUTH_URL}
