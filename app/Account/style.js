@@ -1,4 +1,6 @@
-var React = require('react-native');
+let React = require('react-native');
+
+const DEVICE_WIDTH = React.Dimensions.get('window').width;
 
 module.exports = React.StyleSheet.create({
   centerContainer: {
@@ -8,15 +10,57 @@ module.exports = React.StyleSheet.create({
   },
 
   container: {
-    flex: 1,
-    paddingTop: 40,
-    backgroundColor: '#ffffff'
+    flex: 1
+    //backgroundColor: '#ffffff'
   },
-  header: {
 
+  header: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#d7d7d7',
+    backgroundColor: 'transparent'
   },
+
+  headerBgWrapper: {
+    position: 'absolute',
+    top: 0,
+    left: 0
+  },
+
+  headerBgImg: {
+    width: DEVICE_WIDTH,
+    height: 250
+  },
+
   avatar: {
-    width: 100,
-    height: 100
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    borderColor: '#1AD6FD',
+    borderWidth: 1
+  },
+
+  profileCount: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 10
+  },
+
+  counts: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginHorizontal: 10
+  },
+  countsNum: {
+    color: 'white',
+    fontSize: 18,
+    textAlign: 'center'
+  },
+  countsText: {
+    color: 'white',
+    fontSize: 14,
+    textAlign: 'center'
   }
+
 });
