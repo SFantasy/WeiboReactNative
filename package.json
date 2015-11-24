@@ -1,7 +1,8 @@
 {
   "name": "Yijian",
   "version": "0.0.1",
-  "private": true,
+  "keywords": ["react-native", "Weibo"],
+  "description": "Another iOS Weibo client made with react-native.",
   "scripts": {
     "start": "react-native start"
   },
