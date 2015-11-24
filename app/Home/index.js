@@ -3,14 +3,15 @@
 'use strict';
 
 var React = require('react-native');
-var Icon = require("react-native-vector-icons/FontAwesome");
+var Icon = require('react-native-vector-icons/FontAwesome');
+var styles = require('./style');
 
 var {
   NavigatorIOS,
   TabBarIOS
 } = React;
 
-var HomeView = React.createClass({
+module.exports = React.createClass({
   getInitialState: function () {
     return {
       selectedTab: 'home'
@@ -19,7 +20,7 @@ var HomeView = React.createClass({
 
   render: function () {
     return (
-      <TabBarIOS tintColor={'#5ac8fb'}>
+      <TabBarIOS tintColor={'#5ac8fb'} translucent={true}>
         <Icon.TabBarItem
           title="Home"
           iconName="home"
@@ -31,6 +32,8 @@ var HomeView = React.createClass({
             });
           }}>
           <NavigatorIOS
+            navigationBarHidden={true}
+            style={styles.navContainer}
             initialRoute={{
               title: 'Timeline',
               component: require('../Timeline')
@@ -47,6 +50,8 @@ var HomeView = React.createClass({
             });
           }}>
           <NavigatorIOS
+            navigationBarHidden={true}
+            style={styles.navContainer}
             initialRoute={{
               title: 'Post',
               component: require('../Post')
@@ -63,6 +68,8 @@ var HomeView = React.createClass({
             });
           }}>
           <NavigatorIOS
+            navigationBarHidden={true}
+            style={styles.navContainer}
             initialRoute={{
               title: 'Me',
               component: require('../Account')
@@ -72,5 +79,3 @@ var HomeView = React.createClass({
     );
   }
 });
-
-module.exports = HomeView;
