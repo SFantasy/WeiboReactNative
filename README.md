@@ -1,12 +1,14 @@
 Yijian
 ---
 
+**Developing**
+
 Another Weibo client made with ReactNative.
 
 ## Development
 
 - Node.js v4.0+
-- ReactNative v0.14
+- ReactNative v0.15.0
 
 ### Run
 

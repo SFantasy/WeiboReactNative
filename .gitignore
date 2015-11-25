@@ -32,8 +32,5 @@ local.properties
 #
 node_modules/
 npm-debug.log
-
-# Ignore Android
-android
 index.android.js
-app/config.js
+android

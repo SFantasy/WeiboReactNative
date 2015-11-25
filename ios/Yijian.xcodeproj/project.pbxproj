@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,9 +22,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		9A1EA6F21BEDCFA5008B6D2C /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A1EA6F11BEDCFA5008B6D2C /* FontAwesome.ttf */; };
-		9A1EA6F91BEDD124008B6D2C /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1EA6F81BEDD119008B6D2C /* libRNVectorIcons.a */; };
-		9ACDAA341BF82817001E87DB /* libRNSpinkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACDAA321BF827FA001E87DB /* libRNSpinkit.a */; };
+		9A7E83D51C060E8C001F30AA /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A7E83D41C060E8C001F30AA /* FontAwesome.ttf */; };
+		9A7E83DC1C060F66001F30AA /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7E83DB1C060F42001F30AA /* libRNVectorIcons.a */; };
+		9A7E83E31C061013001F30AA /* libRNSpinkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7E83E21C060FFC001F30AA /* libRNSpinkit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,16 +105,16 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
-		9A1EA6F71BEDD119008B6D2C /* PBXContainerItemProxy */ = {
+		9A7E83DA1C060F42001F30AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A1EA6F31BEDD118008B6D2C /* RNVectorIcons.xcodeproj */;
+			containerPortal = 9A7E83D61C060F42001F30AA /* RNVectorIcons.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
-		9ACDAA311BF827FA001E87DB /* PBXContainerItemProxy */ = {
+		9A7E83E11C060FFC001F30AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9ACDAA231BF827FA001E87DB /* RNSpinkit.xcodeproj */;
+			containerPortal = 9A7E83DD1C060FFC001F30AA /* RNSpinkit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D42CB3511B2538DE00FD0AE2;
 			remoteInfo = RNSpinkit;
@@ -143,9 +143,9 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		9A1EA6F11BEDCFA5008B6D2C /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		9A1EA6F31BEDD118008B6D2C /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
-		9ACDAA231BF827FA001E87DB /* RNSpinkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSpinkit.xcodeproj; path = "../node_modules/react-native-spinkit/ios/RNSpinkit.xcodeproj"; sourceTree = "<group>"; };
+		9A7E83D41C060E8C001F30AA /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		9A7E83D61C060F42001F30AA /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		9A7E83DD1C060FFC001F30AA /* RNSpinkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSpinkit.xcodeproj; path = "../node_modules/react-native-spinkit/ios/RNSpinkit.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ACDAA341BF82817001E87DB /* libRNSpinkit.a in Frameworks */,
-				9A1EA6F91BEDD124008B6D2C /* libRNVectorIcons.a in Frameworks */,
+				9A7E83E31C061013001F30AA /* libRNSpinkit.a in Frameworks */,
+				9A7E83DC1C060F66001F30AA /* libRNVectorIcons.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -254,6 +254,7 @@
 		13B07FAE1A68108700A75B9A /* Yijian */ = {
 			isa = PBXGroup;
 			children = (
+				9A7E83D41C060E8C001F30AA /* FontAwesome.ttf */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -284,8 +285,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				9ACDAA231BF827FA001E87DB /* RNSpinkit.xcodeproj */,
-				9A1EA6F31BEDD118008B6D2C /* RNVectorIcons.xcodeproj */,
+				9A7E83DD1C060FFC001F30AA /* RNSpinkit.xcodeproj */,
+				9A7E83D61C060F42001F30AA /* RNVectorIcons.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -311,7 +312,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				9A1EA6F11BEDCFA5008B6D2C /* FontAwesome.ttf */,
 				13B07FAE1A68108700A75B9A /* Yijian */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* YijianTests */,
@@ -330,18 +330,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A1EA6F41BEDD118008B6D2C /* Products */ = {
+		9A7E83D71C060F42001F30AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A1EA6F81BEDD119008B6D2C /* libRNVectorIcons.a */,
+				9A7E83DB1C060F42001F30AA /* libRNVectorIcons.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9ACDAA241BF827FA001E87DB /* Products */ = {
+		9A7E83DE1C060FFC001F30AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9ACDAA321BF827FA001E87DB /* libRNSpinkit.a */,
+				9A7E83E21C060FFC001F30AA /* libRNSpinkit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -391,8 +391,8 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = fantasy;
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -401,7 +401,7 @@
 				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Yijian" */;
-			compatibilityVersion = "Xcode 6.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -453,12 +453,12 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = 9ACDAA241BF827FA001E87DB /* Products */;
-					ProjectRef = 9ACDAA231BF827FA001E87DB /* RNSpinkit.xcodeproj */;
+					ProductGroup = 9A7E83DE1C060FFC001F30AA /* Products */;
+					ProjectRef = 9A7E83DD1C060FFC001F30AA /* RNSpinkit.xcodeproj */;
 				},
 				{
-					ProductGroup = 9A1EA6F41BEDD118008B6D2C /* Products */;
-					ProjectRef = 9A1EA6F31BEDD118008B6D2C /* RNVectorIcons.xcodeproj */;
+					ProductGroup = 9A7E83D71C060F42001F30AA /* Products */;
+					ProjectRef = 9A7E83D61C060F42001F30AA /* RNVectorIcons.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -540,18 +540,18 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A1EA6F81BEDD119008B6D2C /* libRNVectorIcons.a */ = {
+		9A7E83DB1C060F42001F30AA /* libRNVectorIcons.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRNVectorIcons.a;
-			remoteRef = 9A1EA6F71BEDD119008B6D2C /* PBXContainerItemProxy */;
+			remoteRef = 9A7E83DA1C060F42001F30AA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9ACDAA321BF827FA001E87DB /* libRNSpinkit.a */ = {
+		9A7E83E21C060FFC001F30AA /* libRNSpinkit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRNSpinkit.a;
-			remoteRef = 9ACDAA311BF827FA001E87DB /* PBXContainerItemProxy */;
+			remoteRef = 9A7E83E11C060FFC001F30AA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -570,7 +570,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				9A1EA6F21BEDCFA5008B6D2C /* FontAwesome.ttf in Resources */,
+				9A7E83D51C060E8C001F30AA /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,7 +649,6 @@
 				INFOPLIST_FILE = YijianTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yijian.app/Yijian";
 			};
@@ -667,7 +666,6 @@
 				INFOPLIST_FILE = YijianTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yijian.app/Yijian";
 			};
@@ -686,7 +684,6 @@
 				INFOPLIST_FILE = Yijian/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = codes.fantasy.Yijian;
 				PRODUCT_NAME = Yijian;
 			};
 			name = Debug;
@@ -703,7 +700,6 @@
 				INFOPLIST_FILE = Yijian/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = codes.fantasy.Yijian;
 				PRODUCT_NAME = Yijian;
 			};
 			name = Release;
@@ -728,7 +724,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

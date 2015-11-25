@@ -1,15 +1,23 @@
 {
   "name": "Yijian",
   "version": "0.0.1",
-  "keywords": ["react-native", "Weibo"],
+  "keywords": [
+    "react-native",
+    "Weibo"
+  ],
   "description": "Another iOS Weibo client made with react-native.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SFantasy/WeiboReactNative.git"
+  },
   "scripts": {
     "start": "react-native start"
   },
+  "license": "MIT",
   "dependencies": {
-    "react-native": "^0.14.1",
+    "react-native": "^0.15.0",
     "react-native-spinkit": "0.0.5",
-    "react-native-vector-icons": "^0.8.4",
+    "react-native-vector-icons": "^1.0.0-rc",
     "url": "^0.11.0"
   }
 }
