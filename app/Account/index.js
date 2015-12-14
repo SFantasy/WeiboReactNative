@@ -61,6 +61,7 @@ module.exports = React.createClass({
     return (
       <ScrollView style={styles.container}>
         {this._renderHeader()}
+        {this._renderRencentWeibo()}
       </ScrollView>
     );
   },
@@ -98,5 +99,9 @@ module.exports = React.createClass({
         </View>
       </View>
     );
+  },
+
+  _renderRencentWeibo () {
+
   }
 });
