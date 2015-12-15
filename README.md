@@ -8,12 +8,13 @@ Another Weibo client made with ReactNative.
 ## Development
 
 - Node.js v4.0+
-- ReactNative v0.15.0
+- ReactNative v0.16.0
 
 ### Run
 
 - Clone the project
 - Run `npm install`
+- Change `app_key` and `app_secret` in the `config.example.js` and rename it to `config.js`
 - Open `Yijian.xcodeproj` with XCode
 
 ## Libraries used

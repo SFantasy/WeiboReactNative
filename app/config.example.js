@@ -6,5 +6,6 @@ module.exports = {
   redirect_uri: 'https://api.weibo.com/oauth2/default.html',
   auth_uri: 'https://api.weibo.com/oauth2/access_token',
   api_prefix: 'https://api.weibo.com/2/',
-  token_store_key: 'YIJIAN_ACCESS_TOKEN'
+  token_store_key: 'YIJIAN_ACCESS_TOKEN',
+  uid_store_key: 'YIJIAN_UID'
 };

@@ -5,7 +5,7 @@
     "react-native",
     "Weibo"
   ],
-  "description": "Another iOS Weibo client made with react-native.",
+  "description": "An iOS Weibo client made with react-native.",
   "repository": {
     "type": "git",
     "url": "git@github.com:SFantasy/WeiboReactNative.git"
