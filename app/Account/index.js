@@ -1,11 +1,12 @@
-'use strict';
-
 // Module dependencies
 var React = require('react-native');
 var Spinner = require('react-native-spinkit');
+var InfiniteScrollView = require('react-native-infinite-scroll-view');
+
 var api = require('../api');
 var config = require('../config');
 var styles = require('./style');
+var WeiboCell = require('../components/WeiboCell');
 
 var {
   View,
@@ -13,6 +14,7 @@ var {
   Image,
   ScrollView,
   AsyncStorage,
+  ListView,
   TouchableOpacity
 } = React;
 
@@ -20,13 +22,15 @@ module.exports = React.createClass({
 
   getInitialState () {
     return {
+      timelineDataSource: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2 }),
       loaded: false,
       data: {}
     }
   },
 
   componentDidMount () {
-    this.fetchData().done();
+    this.fetchData();
+    this.fetchWeibo();
   },
 
   async fetchData () {
@@ -35,17 +39,31 @@ module.exports = React.createClass({
     let url = api.users.show + '?access_token=' + accessToken + '&uid=' + uid;
 
     fetch(url)
-      .then((resData) => resData.json())
-      .then((res) => {
-        console.log(res);
+      .then(resData => resData.json())
+      .then(res => {
         this.setState({
           loaded: true,
           data: res
         });
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(err => console.error(err))
+      .done();
+  },
+
+  async fetchWeibo () {
+    let accessToken = await AsyncStorage.getItem(config.token_store_key);
+    let uid = await AsyncStorage.getItem(config.uid_store_key);
+    let url = `${api.statuses.userTimeline}?access_token=${accessToken}&uid=${uid}`;
+
+    fetch(url)
+      .then(resData => resData.json())
+      .then(res => {
+        console.log(res);
+        this.setState({
+          timelineData: this.state.timelineDataSource.cloneWithRows(res.statuses)
+        });
       })
+      .catch(err => console.error(err))
       .done();
   },
 
@@ -60,13 +78,13 @@ module.exports = React.createClass({
 
     return (
       <ScrollView style={styles.container}>
-        {this._renderHeader()}
-        {this._renderRencentWeibo()}
+        {this.renderHeader()}
+        {this.renderAccountTimeline()}
       </ScrollView>
     );
   },
 
-  _renderHeader () {
+  renderHeader () {
     return (
       <View style={styles.header}>
         <View style={styles.headerBgWrapper}>
@@ -101,7 +119,15 @@ module.exports = React.createClass({
     );
   },
 
-  _renderRencentWeibo () {
+  renderAccountTimeline () {
+    if (!this.state.timelineData) return null;
 
+    return (
+      <ListView
+        style={styles.timeline}
+        dataSource={this.state.timelineData}
+        renderRow={rowData => <WeiboCell data={rowData} />}
+      />
+    );
   }
 });

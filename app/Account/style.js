@@ -11,11 +11,11 @@ module.exports = React.StyleSheet.create({
 
   container: {
     flex: 1
-    //backgroundColor: '#ffffff'
   },
 
   header: {
     padding: 10,
+    paddingTop: 30,
     borderBottomWidth: 1,
     borderStyle: 'solid',
     borderColor: '#d7d7d7',
@@ -30,7 +30,7 @@ module.exports = React.StyleSheet.create({
 
   headerBgImg: {
     width: DEVICE_WIDTH,
-    height: 250
+    height: 260
   },
 
   avatar: {
@@ -52,15 +52,23 @@ module.exports = React.StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 10
   },
+
   countsNum: {
     color: 'white',
     fontSize: 18,
     textAlign: 'center'
   },
+
   countsText: {
     color: 'white',
     fontSize: 14,
     textAlign: 'center'
+  },
+
+  timeline: {
+    backgroundColor: 'white',
+    margin: 10,
+    paddingBottom: 42
   }
 
 });
