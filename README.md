@@ -1,9 +1,7 @@
 Yijian
 ---
 
-**Developing**
-
-Another Weibo client made with ReactNative.
+Another Weibo client made with react-native.
 
 ## Development
 
@@ -16,6 +14,18 @@ Another Weibo client made with ReactNative.
 - Run `npm install`
 - Change `app_key` and `app_secret` in the `config.example.js` and rename it to `config.js`
 - Open `Yijian.xcodeproj` with XCode
+- Command + R
+
+### Run on device
+
+1. Run `npm run bundle` to generate bundle file
+2. Command + R
+
+## Screenshot
+
+- Login (OAuth)
+
+<img src="./screenshot/OAuth.png" width="50%" />
 
 ## Libraries used
 
