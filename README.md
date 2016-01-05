@@ -27,9 +27,17 @@
 
 ## 截屏
 
-- 登录界面 (OAuth)
+- 登录 (OAuth)
 
 <img src="./screenshot/OAuth.png" width="50%" />
+
+- 时间轴
+
+<img src="./screenshot/timeline.png" width="50%" />
+
+- 个人主页
+
+<img src="./screenshot/account.png" width="50%" />
 
 ## 使用的开源组件
 
@@ -39,4 +47,4 @@
 
 ## License
 
-The [MIT License](LICENSE)
+The [BSD License](LICENSE)

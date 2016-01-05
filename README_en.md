@@ -27,6 +27,14 @@ Another Weibo client made with react-native (developing)
 
 <img src="./screenshot/OAuth.png" width="50%" />
 
+- Timeline
+
+<img src="./screenshot/timeline.png" width="50%" />
+
+- Personal homepage
+
+<img src="./screenshot/account.png" width="50%" />
+
 ## Libraries used
 
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
@@ -35,4 +43,4 @@ Another Weibo client made with react-native (developing)
 
 ## License
 
-The [MIT License](LICENSE)
+The [BSD License](LICENSE)
