@@ -4,6 +4,10 @@ var apiList = {
   account: {
     getUid: '/get_uid.json'
   },
+  statuses: {
+    userTimeline: '/user_timeline.json',
+    homeTimeline: '/home_timeline.json'
+  },
   users: {
     show: '/show.json'
   }
