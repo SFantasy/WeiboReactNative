@@ -31,6 +31,7 @@ Another Weibo client made with react-native (developing)
 
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 - [react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
+- [react-native-gifted-listview](https://github.com/FaridSafi/react-native-gifted-listview)
 
 ## License
 
