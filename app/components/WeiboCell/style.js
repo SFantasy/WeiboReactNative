@@ -1,4 +1,4 @@
-var React = require('react-native');
+const React = require('react-native');
 
 module.exports = React.StyleSheet.create({
 

@@ -1,9 +1,10 @@
-var React = require('react-native');
-var moment = require('moment');
+// Module dependencies
+const React = require('react-native');
+const moment = require('moment');
 
-var styles = require('./style');
+const styles = require('./style');
 
-let {
+const {
   View,
   Text,
   Image
@@ -28,7 +29,9 @@ module.exports = React.createClass({
                source={{uri: data.user.profile_image_url}} />
         <View style={styles.headerInfo}>
           <Text style={{color:'#333',fontSize:14}}>{data.user.screen_name}</Text>
-          <Text style={{color:'#777',fontSize:12}}>{`${moment(data.created_at).format('YYYY-MM-DD')} from ${data.source.replace(/<\/?[^>]+(>|$)/g, '')}`}</Text>
+          <Text style={{color:'#777',fontSize:12,marginTop:5}}>
+            {`${moment(new Date(data.created_at)).format('YYYY-MM-DD')} from ${data.source.replace(/<\/?[^>]+(>|$)/g, '')}`}
+          </Text>
         </View>
       </View>
     )

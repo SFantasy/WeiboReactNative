@@ -1,6 +1,6 @@
-var config = require('./config');
+const config = require('./config');
 
-var apiList = {
+const apiList = {
   account: {
     getUid: '/get_uid.json'
   },
@@ -13,9 +13,9 @@ var apiList = {
   }
 };
 
-for (var api in apiList) {
+for (let api in apiList) {
   if (apiList.hasOwnProperty(api)) {
-    for (var key in apiList[api]) {
+    for (let key in apiList[api]) {
       if (apiList[api].hasOwnProperty(key)) {
         apiList[api][key] = config.api_prefix + api + apiList[api][key];
       }

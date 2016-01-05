@@ -1,14 +1,13 @@
 // Module dependencies
-var React = require('react-native');
-var Spinner = require('react-native-spinkit');
-var InfiniteScrollView = require('react-native-infinite-scroll-view');
+const React = require('react-native');
+const Spinner = require('react-native-spinkit');
 
-var api = require('../api');
-var config = require('../config');
-var styles = require('./style');
-var WeiboCell = require('../components/WeiboCell');
+const api = require('../api');
+const config = require('../config');
+const styles = require('./style');
+const WeiboCell = require('../components/WeiboCell');
 
-var {
+const {
   View,
   Text,
   Image,
@@ -36,7 +35,7 @@ module.exports = React.createClass({
   async fetchData () {
     let accessToken = await AsyncStorage.getItem(config.token_store_key);
     let uid = await AsyncStorage.getItem(config.uid_store_key);
-    let url = api.users.show + '?access_token=' + accessToken + '&uid=' + uid;
+    let url = `${api.users.show}?access_token=${accessToken}&uid=${uid}`;
 
     fetch(url)
       .then(resData => resData.json())
