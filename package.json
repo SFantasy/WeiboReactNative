@@ -15,7 +15,7 @@
     "start": "react-native start",
     "bundle": "react-native bundle --entry-file index.ios.js --platform ios --dev false --bundle-output ./ios/main.jsbundle"
   },
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "moment": "^2.10.6",
     "react-native": "^0.16.0",
