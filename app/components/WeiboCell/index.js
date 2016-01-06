@@ -18,8 +18,30 @@ module.exports = React.createClass({
       <View style={styles.card}>
         {this.renderCellHeader(data)}
         <Text>{data.text}</Text>
+        {this.renderPics(data.pic_urls)}
       </View>
     );
+  },
+
+  renderPics (pics) {
+    let picView = [];
+
+    if (pics && pics.length) {
+      let l = pics.length;
+
+      // Less than 3
+      if (l <= 3) {
+        pics.forEach((pic, index) => {
+          picView.push(
+            <Image
+              key={`${index}`}
+              style={{ height: 80, width: 80, marginRight: 5 }}
+              source={{uri: pic.thumbnail_pic }} />);
+        });
+      }
+    }
+
+    return <View style={{ flexDirection: 'row', marginTop: 5 }}>{picView}</View>
   },
 
   renderCellHeader (data) {
