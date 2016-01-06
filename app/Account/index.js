@@ -57,7 +57,6 @@ module.exports = React.createClass({
     fetch(url)
       .then(resData => resData.json())
       .then(res => {
-        console.log(res);
         this.setState({
           timelineData: this.state.timelineDataSource.cloneWithRows(res.statuses)
         });
@@ -108,7 +107,7 @@ module.exports = React.createClass({
               <Text style={styles.countsText}>Followers</Text>
             </TouchableOpacity>
           </View>
-          <Text style={{marginTop:10,textAlign:'center',color:'white'}}>{this.state.data.description}</Text>
+          <Text numberOfLines={1} style={{marginTop:10,textAlign:'center',color:'white'}}>{this.state.data.description}</Text>
           <View style={{flexDirection:'row',justifyContent:'center',marginTop:10}}>
             <Text style={{color:'white',marginRight:10}}>{this.state.data.location}</Text>
             <Text style={{color:'white'}}>{this.state.data.url}</Text>
