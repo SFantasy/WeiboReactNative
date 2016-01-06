@@ -23,5 +23,11 @@ module.exports = React.StyleSheet.create({
 
   headerInfo: {
     marginLeft: 10
+  },
+
+  text: {
+    color: '#333',
+    fontSize: 14,
+    marginTop: 5
   }
 });
