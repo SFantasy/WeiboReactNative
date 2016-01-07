@@ -18,10 +18,10 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "moment": "^2.10.6",
-    "react-native": "^0.16.0",
+    "react-native": "^0.18.0-rc",
     "react-native-gifted-listview": "0.0.10",
     "react-native-spinkit": "0.0.5",
-    "react-native-vector-icons": "^1.0.0-rc",
+    "react-native-vector-icons": "^1.0.4",
     "url": "^0.11.0"
   }
 }
