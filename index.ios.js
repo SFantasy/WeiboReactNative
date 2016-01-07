@@ -4,31 +4,29 @@
  * @author FantasyShao <fantasyshao@icloud.com>
  */
 
-'use strict';
-
 // Module dependencies
-var React = require('react-native');
-var url = require('url');
+const React = require('react-native');
+const url = require('url');
 
-var config = require('./app/config');
-var api = require('./app/api');
-var common = require('./app/common');
-var HomeView = require('./app/Home');
+const config = require('./app/config');
+const api = require('./app/api');
+const common = require('./app/common');
+const HomeView = require('./app/Home');
 
-var {
+const {
   AppRegistry,
   View,
   WebView
 } = React;
 
-var OAUTH_URL = [
+const OAUTH_URL = [
   'https://api.weibo.com/oauth2/authorize',
   '?client_id=' + config.app_key,
   '&response_type=code',
   '&redirect_uri=' + config.redirect_uri
 ].join('');
 
-var Yijian = React.createClass({
+const Yijian = React.createClass({
 
   getInitialState () {
     return {
