@@ -3,27 +3,29 @@
 
 [README in English](README_en.md)
 
-一款使用react-native开发的微博客户端 (开发中)
+> 开发中, 欢迎 watch, star && fork
+
+一款使用react-native开发的微博客户端
 
 ## 开发
 
 ### 依赖版本
 
 - Node.js v4.0+
-- ReactNative v0.16.0
+- ReactNative v0.18.0-rc
 
 ### 运行
 
-- Clone 项目
-- 执行 `npm install`
+- `git clone git@github.com:SFantasy/WeiboReactNative.git`
+- 执行 `cd WeiboReactNative && npm install`
 - 将 `config.example.js` 中的 `app_key` 和 `app_secret` 修改为你自己申请的, 并将文件重命名为 `config.js`
 - 在 XCode 中打开 `Yijian.xcodeproj`
 - Command + R
 
 ### 在设备上运行
 
-1. 执行 `npm run bundle` 生成打包的JS文件
-2. Command + R
+- 执行 `npm run bundle` 生成打包的JS文件
+- Command + R
 
 ## 截屏
 

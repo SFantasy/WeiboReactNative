@@ -1,25 +1,27 @@
 Yijian
 ---
 
-Another Weibo client made with react-native (developing)
+> Developing, welcome to watch, star && fork.
+
+Another Weibo client made with react-native
 
 ## Development
 
 - Node.js v4.0+
-- ReactNative v0.16.0
+- ReactNative v0.18.0-rc
 
 ### Run
 
-- Clone the project
-- Run `npm install`
+- `git clone git@github.com:SFantasy/WeiboReactNative.git`
+- Run `cd WeiboReactNative && npm install`
 - Change `app_key` and `app_secret` in the `config.example.js` and rename it to `config.js`
 - Open `Yijian.xcodeproj` with XCode
 - Command + R
 
 ### Run on device
 
-1. Run `npm run bundle` to generate bundle file
-2. Command + R
+- Run `npm run bundle` to generate bundle file
+- Command + R
 
 ## Screenshot
 
