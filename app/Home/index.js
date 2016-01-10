@@ -20,8 +20,9 @@ module.exports = React.createClass({
     return (
       <TabBarIOS tintColor={'#5ac8fb'} translucent={true}>
         <Icon.TabBarItem
-          title="Home"
+          title="首页"
           iconName="home"
+          iconSize={28}
           selectedIconName="home"
           selected={this.state.selectedTab === 'home'}
           onPress={() => {
@@ -32,14 +33,17 @@ module.exports = React.createClass({
           <NavigatorIOS
             navigationBarHidden={true}
             style={styles.navContainer}
+            translucent={true}
+            barTintColor="#fff"
             initialRoute={{
-              title: 'Timeline',
+              title: '',
               component: require('../Timeline')
             }}/>
         </Icon.TabBarItem>
         <Icon.TabBarItem
-          title="Post"
+          title="写微博"
           iconName="plus"
+          iconSize={28}
           selectedIconName="plus"
           selected={this.state.selectedTab === 'post'}
           onPress={() => {
@@ -56,8 +60,27 @@ module.exports = React.createClass({
             }}/>
         </Icon.TabBarItem>
         <Icon.TabBarItem
-          title="Me"
+          title="消息"
+          iconName="envelope-o"
+          iconSize={28}
+          selectedIconName="envelope-o"
+          selected={this.state.selectedTab === 'message'}
+          onPress={() => {
+            this.setState({
+              selectedTab: 'message'
+            });
+          }}>
+          <NavigatorIOS
+            style={styles.navContainer}
+            initialRoute={{
+              title: '消息',
+              component: require('../Message/List')
+            }} />
+        </Icon.TabBarItem>
+        <Icon.TabBarItem
+          title="我"
           iconName="user"
+          iconSize={28}
           selectedIconName="user"
           selected={this.state.selectedTab === 'user'}
           onPress={() => {
@@ -69,7 +92,7 @@ module.exports = React.createClass({
             navigationBarHidden={true}
             style={styles.navContainer}
             initialRoute={{
-              title: 'Me',
+              title: '我',
               component: require('../Account')
             }}/>
         </Icon.TabBarItem>
