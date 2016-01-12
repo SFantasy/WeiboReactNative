@@ -16,7 +16,8 @@ const HomeView = require('./app/Home');
 const {
   AppRegistry,
   View,
-  WebView
+  WebView,
+  AsyncStorage
 } = React;
 
 const OAUTH_URL = [
@@ -28,10 +29,28 @@ const OAUTH_URL = [
 
 const Yijian = React.createClass({
 
+  async _loadInitialState () {
+    try {
+      let status = await AsyncStorage.getItem(config.login_statue_store_key);
+
+      if (status !== null) {
+        this.setState({
+          login: status
+        });
+      }
+    } catch (e) {
+      console.log(err);
+    }
+  },
+
   getInitialState () {
     return {
       login: false
     }
+  },
+
+  componentDidMount () {
+    this._loadInitialState().done();
   },
 
   render () {
@@ -75,6 +94,8 @@ const Yijian = React.createClass({
           this.setState({
             login: true
           });
+          // 存储登录状态
+          common.storeItem(config.login_statue_store_key, 'true');
           // 存储access_token
           common.storeItem(config.token_store_key, responseData.access_token);
           // 获取登录用户的uid
