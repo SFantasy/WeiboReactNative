@@ -1,8 +1,9 @@
-var React = require('react-native');
+const React = require('react-native');
+const { AsyncStorage } = React;
 
 exports.storeItem = async function (key, value) {
   try {
-    await React.AsyncStorage.setItem(key, value);
+    await AsyncStorage.setItem(key, value);
   } catch (err) {
     console.error(err);
   }
