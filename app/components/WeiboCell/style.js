@@ -1,12 +1,13 @@
 const React = require('react-native');
+const commonStyle = require('../../style.common');
 
 module.exports = React.StyleSheet.create({
 
   card: {
     paddingVertical: 10,
     backgroundColor: 'white',
-    borderBottomWidth: 0.5,
-    borderColor: '#ddd'
+    borderBottomWidth: 1,
+    borderColor: commonStyle.BORDER_COLOR
   },
 
   header: {
@@ -14,20 +15,27 @@ module.exports = React.StyleSheet.create({
   },
 
   avatar: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    borderWidth: 0.5,
-    borderColor: '#e2e2e2'
+    width: 40,
+    height: 40,
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: commonStyle.BORDER_COLOR
   },
 
   headerInfo: {
     marginLeft: 10
   },
 
+  textWrapper: {
+    flex: 1,
+    flexWrap: 'wrap'
+  },
+
   text: {
-    color: '#333',
+    fontFamily: 'Helvetica',
+    color: '#233',
     fontSize: 14,
-    marginTop: 5
+    marginTop: 5,
+    lineHeight: 16
   }
 });

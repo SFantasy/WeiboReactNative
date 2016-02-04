@@ -2,6 +2,8 @@
 const React = require('react-native');
 const moment = require('moment');
 
+moment.locale('zh-cn');
+
 const styles = require('./style');
 
 const {
@@ -21,7 +23,7 @@ module.exports = React.createClass({
         {this.renderPics(data.pic_urls)}
         {
           data.retweeted_status ?
-          <View style={{ padding: 5, borderLeftWidth: 4, borderColor: '#e2e2e2' }}>
+          <View style={{ padding: 5, borderLeftWidth: 2, borderColor: '#e2e2e2' }}>
             <Text style={{ color: '#007aff' }}>{`@${data.retweeted_status.user.screen_name}`}</Text>
             <Text style={styles.text}>{data.retweeted_status.text}</Text>
             {this.renderPics(data.retweeted_status.pic_urls)}
@@ -92,7 +94,7 @@ module.exports = React.createClass({
       }
     }
 
-    return <View>{picViews}</View>
+    return <View style={{ marginTop: 5 }}>{picViews}</View>
   },
 
   renderCellHeader (data) {
@@ -102,8 +104,8 @@ module.exports = React.createClass({
                source={{uri: data.user.profile_image_url}} />
         <View style={styles.headerInfo}>
           <Text style={{color:'#333',fontSize:14}}>{data.user.screen_name}</Text>
-          <Text style={{color:'#777',fontSize:12,marginTop:5}}>
-            {`${moment(new Date(data.created_at)).format('YYYY-MM-DD')} from ${data.source.replace(/<\/?[^>]+(>|$)/g, '')}`}
+          <Text style={{color:'#999',fontSize:12,marginTop:8}}>
+            {`${moment(new Date(data.created_at)).format('YYYY-MM-DD')} via ${data.source.replace(/<\/?[^>]+(>|$)/g, '')}`}
           </Text>
         </View>
       </View>
