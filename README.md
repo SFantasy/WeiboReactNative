@@ -12,7 +12,7 @@
 ### 依赖版本
 
 - Node.js v4.0+
-- ReactNative v0.18.0-rc
+- ReactNative v0.19.0
 
 ### 运行
 
