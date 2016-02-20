@@ -10,6 +10,9 @@ const apiList = {
   },
   users: {
     show: '/show.json'
+  },
+  comments: {
+    toMe: '/to_me.json'
   }
 };
 
