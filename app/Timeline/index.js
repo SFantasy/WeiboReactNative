@@ -1,6 +1,7 @@
 // Module dependencies
 const React = require('react-native');
-const WeiboList = require('../components/WeiboList');
+const CommonListView = require('../components/CommonListView');
+const WeiboCell = require('../components/WeiboCell');
 
 const config = require('../config');
 const api = require('../api');
@@ -26,6 +27,6 @@ module.exports = React.createClass({
   },
 
   render () {
-    return <WeiboList onFetch={this.onFetch} />;
+    return <CommonListView cell={WeiboCell} onFetch={this.onFetch} />;
   }
 });

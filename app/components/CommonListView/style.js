@@ -1,5 +1,5 @@
 const React = require('react-native');
-const common_style = require('../style.common');
+const common_style = require('../../style.common');
 
 module.exports = React.StyleSheet.create({
   container: {
