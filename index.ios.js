@@ -31,12 +31,20 @@ const Yijian = React.createClass({
 
   async _loadInitialState () {
     try {
-      let status = await AsyncStorage.getItem(config.login_statue_store_key);
+      let status = await AsyncStorage.getItem(config.login_status_store_key);
+      let token = await AsyncStorage.getItem(config.token_store_key);
+
+      let GET_TOKEN_INFO = `https://api.weibo.com/oauth2/get_token_info?access_token=${token}`;
 
       if (status !== null) {
-        this.setState({
-          login: status
-        });
+        fetch(GET_TOKEN_INFO, {
+          method: 'POST'
+        }).then(response => response.json())
+          .then(res => {
+              this.setState({
+                login: res.expire_in < 60 * 60 * 1000 ? false : status
+              });
+          });
       }
     } catch (e) {
       console.log(err);
