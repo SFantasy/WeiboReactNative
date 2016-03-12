@@ -44,7 +44,8 @@ const Yijian = React.createClass({
               this.setState({
                 login: res.expire_in < 60 * 60 * 1000 ? false : status
               });
-          });
+          })
+          .done();
       }
     } catch (e) {
       console.log(err);
@@ -103,13 +104,13 @@ const Yijian = React.createClass({
             login: true
           });
           // 存储登录状态
-          common.storeItem(config.login_statue_store_key, 'true');
+          common.storeItem(config.login_status_store_key, 'true');
           // 存储access_token
           common.storeItem(config.token_store_key, responseData.access_token);
           // 获取登录用户的uid
           fetch(api.account.getUid + '?access_token=' + responseData.access_token)
-            .then((res) => res.json())
-            .then((data) => {
+            .then(res => res.json())
+            .then(data => {
               common.storeItem(config.uid_store_key, data.uid + '');
             })
             .done();
