@@ -8,7 +8,7 @@ Another Weibo client made with react-native
 ## Development
 
 - Node.js v4.0+
-- ReactNative v0.19.0
+- ReactNative v0.21.0
 
 ### Run
 
