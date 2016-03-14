@@ -6,7 +6,7 @@ module.exports = React.StyleSheet.create({
     flex: 1,
     paddingHorizontal: 10,
     paddingBottom: 48,
-    paddingTop: 20
+    paddingTop: 64
   },
   loadingView: {
     flex: 1,

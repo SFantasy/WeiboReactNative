@@ -1,22 +1,27 @@
 // HomeView
 
-var React = require('react-native');
-var Icon = require('react-native-vector-icons/FontAwesome');
-var styles = require('./style');
+// Module dependencies
+const React = require('react-native');
+const Icon = require('react-native-vector-icons/FontAwesome');
+const styles = require('./style');
 
-var {
+const {
   NavigatorIOS,
   TabBarIOS
 } = React;
 
-module.exports = React.createClass({
-  getInitialState: function () {
+var HomeTabs = React.createClass({
+  getInitialState () {
     return {
       selectedTab: 'home'
     }
   },
 
-  render: function () {
+  triggerPostView () {
+    // TBD
+  },
+
+  render () {
     return (
       <TabBarIOS tintColor={'#5ac8fb'} translucent={true}>
         <Icon.TabBarItem
@@ -31,50 +36,36 @@ module.exports = React.createClass({
             });
           }}>
           <NavigatorIOS
-            navigationBarHidden={true}
+            navigationBarHidden={false}
             style={styles.navContainer}
             translucent={true}
+            rightButtonTitle="╋"
+            onRightButtonPress={this.triggerPostView()}
             barTintColor="#fff"
             initialRoute={{
-              title: '',
+              title: '时间轴',
               component: require('../Timeline')
             }}/>
         </Icon.TabBarItem>
         <Icon.TabBarItem
-          title="写微博"
-          iconName="plus"
-          iconSize={28}
-          selectedIconName="plus"
-          selected={this.state.selectedTab === 'post'}
-          onPress={() => {
-            this.setState({
-              selectedTab: 'post'
-            });
-          }}>
-          <NavigatorIOS
-            navigationBarHidden={true}
-            style={styles.navContainer}
-            initialRoute={{
-              title: 'Post',
-              component: require('../Post')
-            }}/>
-        </Icon.TabBarItem>
-        <Icon.TabBarItem
-          title="消息"
+          title="评论"
           iconName="envelope-o"
           iconSize={28}
           selectedIconName="envelope-o"
-          selected={this.state.selectedTab === 'message'}
+          selected={this.state.selectedTab === 'comment'}
           onPress={() => {
             this.setState({
-              selectedTab: 'message'
+              selectedTab: 'comment'
             });
           }}>
           <NavigatorIOS
+            navigationBarHidden={false}
+            rightButtonTitle="╋"
+            onRightButtonPress={this.triggerPostView()}
             style={styles.navContainer}
             initialRoute={{
-              title: '消息',
-              component: require('../Message/List')
+              title: '评论',
+              component: require('../Comment')
             }} />
         </Icon.TabBarItem>
         <Icon.TabBarItem
@@ -89,7 +80,9 @@ module.exports = React.createClass({
             });
           }}>
           <NavigatorIOS
-            navigationBarHidden={true}
+            navigationBarHidden={false}
+            rightButtonTitle="╋"
+            onRightButtonPress={this.triggerPostView()}
             style={styles.navContainer}
             initialRoute={{
               title: '我',
@@ -98,5 +91,11 @@ module.exports = React.createClass({
         </Icon.TabBarItem>
       </TabBarIOS>
     );
+  }
+});
+
+module.exports = React.createClass({
+  render () {
+    return <HomeTabs />
   }
 });
