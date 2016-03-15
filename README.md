@@ -39,7 +39,7 @@
 
 - 评论列表
 
-<img src="./srceenshot/comments.png" width="50%" />
+<img src="./screenshot/comments.png" width="50%" />
 
 - 个人主页
 

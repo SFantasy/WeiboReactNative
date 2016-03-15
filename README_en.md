@@ -35,7 +35,7 @@ Another Weibo client made with react-native
 
 - Comments
 
-<img src="./srceenshot/comments.png" width="50%" />
+<img src="./screenshot/comments.png" width="50%" />
 
 - Personal homepage
 
