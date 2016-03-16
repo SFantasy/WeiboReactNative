@@ -8,6 +8,7 @@ const {
   View,
   Text,
   TextInput,
+  AsyncStorage,
   TouchableOpacity
 } = React;
 
@@ -42,6 +43,7 @@ module.exports = React.createClass({
           placeholder="想说点啥?"
           returnKeyType="done"
           style={styles.textArea}
+          onChangeText={text => { this.setState({ text: text }); }}
           multiline={true} />
       </View>
     );
@@ -49,25 +51,35 @@ module.exports = React.createClass({
 
   async post () {
     let accessToken = await AsyncStorage.getItem(config.token_store_key);
-    let url = `${api.statuses.update}?access_token=${accessToken}&status=${this.state.text}`;
 
-    fetch(url, {
-      method: 'POST'
+    fetch(api.statuses.update, {
+      method: 'POST',
+      body: JSON.stringify({
+        access_token: accessToken,
+        status: encodeURIComponent(this.state.text)
+      })
     })
     .then(responseText => responseText.json())
     .then(response => {
-      AlertIOS.alert(
-        null,
-        '发布成功',
-        [
-          {
-            text: '嗯, 快退下吧',
-            onPress: () => {
-              this.props.onCancel();
+      if (!response.id) {
+        AlertIOS.alert(
+          '发布失败',
+          '一定是哪里出问题了..快联系@FantasyShao'
+        );
+      } else {
+        AlertIOS.alert(
+          null,
+          '发布成功',
+          [
+            {
+              text: '嗯, 快退下吧',
+              onPress: () => {
+                this.props.onCancel();
+              }
             }
-          }
-        ]
-      );
+          ]
+        );
+      }
     })
     .done();
 
