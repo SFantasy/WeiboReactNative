@@ -1,7 +1,10 @@
 const React = require('react-native');
 const styles = require('./style');
+const config = require('../config');
+const api = require('../api');
 
 const {
+  AlertIOS,
   View,
   Text,
   TextInput,
@@ -44,7 +47,29 @@ module.exports = React.createClass({
     );
   },
 
-  post () {
+  async post () {
+    let accessToken = await AsyncStorage.getItem(config.token_store_key);
+    let url = `${api.statuses.update}?access_token=${accessToken}&status=${this.state.text}`;
+
+    fetch(url, {
+      method: 'POST'
+    })
+    .then(responseText => responseText.json())
+    .then(response => {
+      AlertIOS.alert(
+        null,
+        '发布成功',
+        [
+          {
+            text: '嗯, 快退下吧',
+            onPress: () => {
+              this.props.onCancel();
+            }
+          }
+        ]
+      );
+    })
+    .done();
 
   }
 

@@ -6,7 +6,8 @@ const apiList = {
   },
   statuses: {
     userTimeline: '/user_timeline.json',
-    homeTimeline: '/home_timeline.json'
+    homeTimeline: '/home_timeline.json',
+    update: '/update.json'
   },
   users: {
     show: '/show.json'
