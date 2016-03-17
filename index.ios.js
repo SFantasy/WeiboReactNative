@@ -41,9 +41,15 @@ const Yijian = React.createClass({
           method: 'POST'
         }).then(response => response.json())
           .then(res => {
-              this.setState({
-                login: res.expire_in < 60 * 60 * 1000 ? false : status
-              });
+              if (res.error_code) {
+                this.setState({
+                  login: false
+                });
+              } else {
+                this.setState({
+                  login: res.expire_in < 60 * 60 * 1000 ? false : status
+                });
+              }
           })
           .done();
       }
