@@ -56,6 +56,7 @@ module.exports = React.createClass({
       method: 'POST',
       body: JSON.stringify({
         access_token: accessToken,
+        source: config.app_key,
         status: encodeURIComponent(this.state.text)
       })
     })
@@ -64,7 +65,7 @@ module.exports = React.createClass({
       if (!response.id) {
         AlertIOS.alert(
           '发布失败',
-          '一定是哪里出问题了..快联系@FantasyShao'
+          `一定是哪里出问题了..快联系@FantasyShao (${response.error})`
         );
       } else {
         AlertIOS.alert(
