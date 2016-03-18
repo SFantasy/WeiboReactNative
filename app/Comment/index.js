@@ -4,7 +4,6 @@ const CommonListView = require('../components/CommonListView');
 const WeiboCell = require('../components/WeiboCell');
 
 const config = require('../config');
-const styles = require('./style');
 const api = require('../api');
 
 const {
