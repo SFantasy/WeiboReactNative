@@ -79,7 +79,7 @@ const Yijian = React.createClass({
       <View style={{flex: 1, marginTop: 20 }}>
         <WebView
           ref={'webview'}
-          url={OAUTH_URL}
+          source={{uri: OAUTH_URL}}
           automaticallyAdjustContentInsets={false}
           onNavigationStateChange={this.onNavigationStateChange}
           startInLoadingState={true}
