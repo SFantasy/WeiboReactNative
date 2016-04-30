@@ -3,7 +3,7 @@ Yijian
 
 > Developing, welcome to watch, star && fork.
 
-Another Weibo client made with react-native
+An iOS Weibo client made with [react-native](http://facebook.github.io/react-native)
 
 ## Development
 

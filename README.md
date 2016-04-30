@@ -5,7 +5,7 @@
 
 > 开发中, 欢迎 watch, star && fork
 
-一款使用react-native开发的微博客户端
+一款使用[react-native](http://facebook.github.io/react-native)开发的微博客户端
 
 ## 开发
 
