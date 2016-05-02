@@ -4,14 +4,16 @@ const commonStyle = require('../../style.common');
 module.exports = React.StyleSheet.create({
 
   card: {
-    paddingVertical: 10,
+    paddingTop: 10,
+    marginBottom: 10,
     backgroundColor: 'white',
     borderBottomWidth: 1,
     borderColor: commonStyle.BORDER_COLOR
   },
 
   header: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingHorizontal: 10
   },
 
   avatar: {
@@ -36,6 +38,23 @@ module.exports = React.StyleSheet.create({
     color: '#233',
     fontSize: 14,
     marginTop: 5,
-    lineHeight: 16
+    lineHeight: 16,
+    paddingHorizontal: 10
+  },
+
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    borderTopColor: commonStyle.BORDER_COLOR,
+    borderBottomColor: commonStyle.BORDER_COLOR,
+    borderTopWidth: 0.5,
+    borderBottomWidth: 0.5
+  },
+
+  footerCell: {
+    flex: 1,
+    paddingVertical: 5,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });

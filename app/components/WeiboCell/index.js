@@ -1,6 +1,7 @@
 // Module dependencies
 const React = require('react-native');
 const moment = require('moment');
+const Icon = require('react-native-vector-icons/FontAwesome');
 
 moment.locale('zh-cn');
 
@@ -9,7 +10,8 @@ const styles = require('./style');
 const {
   View,
   Text,
-  Image
+  Image,
+  TouchableOpacity
 } = React;
 
 module.exports = React.createClass({
@@ -23,12 +25,13 @@ module.exports = React.createClass({
         {this.renderPics(data.pic_urls)}
         {
           data.retweeted_status ?
-          <View style={{ padding: 5, borderLeftWidth: 2, borderColor: '#e2e2e2' }}>
+          <View style={{ paddingHorizontal: 10, paddingVertical: 5, backgroundColor: '#fafafa' }}>
             <Text style={{ color: '#007aff' }}>{`@${data.retweeted_status.user.screen_name}`}</Text>
             <Text style={styles.text}>{data.retweeted_status.text}</Text>
             {this.renderPics(data.retweeted_status.pic_urls)}
           </View> : null
         }
+        {this.renderCellFooter()}
       </View>
     );
   },
@@ -94,7 +97,7 @@ module.exports = React.createClass({
       }
     }
 
-    return <View style={{ marginTop: 5 }}>{picViews}</View>
+    return <View style={{ marginVertical: 5, paddingHorizontal: 10 }}>{picViews}</View>
   },
 
   renderCellHeader (data) {
@@ -108,6 +111,22 @@ module.exports = React.createClass({
             {`${moment(new Date(data.created_at)).format('YYYY-MM-DD')} via ${data.source.replace(/<\/?[^>]+(>|$)/g, '')}`}
           </Text>
         </View>
+      </View>
+    )
+  },
+
+  renderCellFooter () {
+    return (
+      <View style={styles.footer}>
+        <TouchableOpacity style={styles.footerCell}>
+          <Icon name="retweet" color="#999" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.footerCell}>
+          <Icon name="reply" color="#999" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.footerCell}>
+          <Icon name="heart-o" color="#999" />
+        </TouchableOpacity>
       </View>
     )
   }

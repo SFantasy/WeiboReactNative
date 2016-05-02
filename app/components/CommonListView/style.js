@@ -4,9 +4,9 @@ const common_style = require('../../style.common');
 module.exports = React.StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
     paddingBottom: 48,
-    paddingTop: 64
+    paddingTop: 64,
+    backgroundColor: '#f1f1f1'
   },
   loadingView: {
     flex: 1,
