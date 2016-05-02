@@ -68,7 +68,7 @@ module.exports = React.StyleSheet.create({
 
   timeline: {
     backgroundColor: 'white',
-    margin: 10,
+    marginTop: 10,
     paddingBottom: 42
   }
 
