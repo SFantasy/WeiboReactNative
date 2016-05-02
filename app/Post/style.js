@@ -5,7 +5,7 @@ module.exports = React.StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 20,
-    backgroundColor: '#fff'
+    backgroundColor: '#f1f1f1'
   },
 
   postTitle: {
@@ -21,11 +21,26 @@ module.exports = React.StyleSheet.create({
   textArea: {
     height: 200,
     padding: 10,
-    fontSize: 14
+    fontSize: 14,
+    borderBottomWidth: 1,
+    borderBottomColor: StyleCommon.BORDER_COLOR,
+    backgroundColor: 'white'
   },
 
-  btn: {
+  postActions: {
+    backgroundColor: 'white',
+    borderBottomWidth: 0.5,
+    borderBottomColor: StyleCommon.BORDER_COLOR,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    alignItems: 'center'
+  },
+
+  actionText: {
+    color: '#777',
     fontSize: 14,
-    color: '#999'
+    marginRight: 5
   }
 });
