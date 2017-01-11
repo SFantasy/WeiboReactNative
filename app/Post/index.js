@@ -18,7 +18,8 @@ module.exports = React.createClass({
 
   getDefaultProps () {
     return {
-      onCancel () {}
+      onCancel () {},
+      onError () {}
     }
   },
 
@@ -80,10 +81,30 @@ module.exports = React.createClass({
       .then(responseText => responseText.json())
       .then(response => {
         if (!response.id) {
-          AlertIOS.alert(
-            '发布失败',
-            `一定是哪里出问题了..快联系@FantasyShao (${response.error})`
-          );
+          console.log(`Error: ${response.error}`);
+          if (response.error_code == '21301') {
+            AlertIOS.alert(
+              '发布失败',
+              '微博授权过期, 请重新授权',
+              [{
+                text: '去授权',
+                style: 'cancel',
+                onPress: () => {
+                  // 删除存储的token
+                  AsyncStorage.removeItem(config.token_store_key, (err) => {
+                    if (!err) {
+                      this.props.onError(1);
+                    }
+                  });
+                }
+              }]
+            );
+          } else {
+            AlertIOS.alert(
+              '发布失败',
+              `一定是哪里出问题了..快联系@FantasyShao (${response.error})`
+            );
+          }
         } else {
           AlertIOS.alert(
             null,

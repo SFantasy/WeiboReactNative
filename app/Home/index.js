@@ -34,7 +34,7 @@ module.exports = React.createClass({
         <Modal animated={true}
                transparent={false}
                visible={this.state.postViewVisible}>
-          <PostView onCancel={this.togglePostView.bind(this, false)} />
+          <PostView onCancel={this.togglePostView.bind(this, false)} onError={(err) => { console.log(err); }} />
         </Modal>
         <TabBarIOS tintColor={'#5ac8fb'} translucent={true}>
           <Icon.TabBarItem

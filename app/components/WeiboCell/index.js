@@ -21,7 +21,7 @@ module.exports = React.createClass({
     return (
       <View style={styles.card}>
         {this.renderCellHeader(data)}
-        <Text style={styles.text}>{data.text}</Text>
+        <Text style={styles.text}>{this.handleWeiboText(data.text)}</Text>
         {this.renderPics(data.pic_urls)}
         {
           data.retweeted_status ?
@@ -34,6 +34,10 @@ module.exports = React.createClass({
         {this.renderCellFooter()}
       </View>
     );
+  },
+
+  handleWeiboText (text) {
+    return text;
   },
 
   getPicView (row, column, pics) {

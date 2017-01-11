@@ -47,8 +47,8 @@ module.exports = React.StyleSheet.create({
     justifyContent: 'space-around',
     borderTopColor: commonStyle.BORDER_COLOR,
     borderBottomColor: commonStyle.BORDER_COLOR,
-    borderTopWidth: 0.5,
-    borderBottomWidth: 0.5
+    borderTopWidth: 1,
+    borderBottomWidth: 1
   },
 
   footerCell: {

@@ -11,6 +11,7 @@ const url = require('url');
 const config = require('./app/config');
 const api = require('./app/api');
 const common = require('./app/common');
+const Auth = require('./app/Auth');
 const HomeView = require('./app/Home');
 
 const {
